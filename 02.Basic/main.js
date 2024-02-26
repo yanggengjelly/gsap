@@ -1,10 +1,27 @@
-gsap.to(".orange", {
-  scale: 1,
-  duration: 4,
-  width: 1000,
-  borderRadius: 20,
-  backgroundColor: "black",
-});
+// gsap.to(".orange", {
+//   scale: 1,
+//   duration: 4,
+//   width: 1000,
+//   borderRadius: 20,
+//   backgroundColor: "black",
+//   y: 100,
+// });
+
+//gsap.fromTo()는 지정한 값에서 지정한 값으로 애니메이션을 적용합니다.
+// gsap.fromTo(
+//   ".orange",
+//   { x: 700, y: 400, scale: 1, opacity: 0, duration: 1 },
+//   { x: 400, y: 200, scale: 10, opacity: 1, duration: 3 }
+// );
+
+// - delay : 애니메이션이 시작되기 전에 지연시간을 지정합니다.
+// - repeat : 애니메이션이 몇번 반복되어야 하는지를 지정합니다.
+// - yoyo : `true` 로 설정하면 애니메이션이 앞뒤로 재생됩니다.
+// - repeatDelay : 각 반복 사이에 발생하는 지연시간을 지정합니다.
+
+gsap.to(".orange", { x: 300, repeat: 3, delay: 2, repeatDelay: 1, yoyo: true });
+//무한 반복은 repeat: -1 을 설정하면 애니메이션이 무기한 반복됩니다.
+//yoyo 속성은 repeat 설정이 들어있어야 사용가능합니다.
 
 // x: 요소의 x 좌표를 설정합니다.
 // y: 요소의 y 좌표를 설정합니다.
